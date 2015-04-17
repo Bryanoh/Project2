@@ -1,0 +1,11 @@
+platform=1428346516000
+cluster.bin=1428346516000
+cluster.etc=1428346516000
+cluster.platform=1428346516000
+cluster.pronetbeans=1428346516000
+user=1428346516000
+crc=7
+locale=da_DK
+branding=pronetbeans
+java.version=1.8.0_31
+java.vm.version=25.31-b07

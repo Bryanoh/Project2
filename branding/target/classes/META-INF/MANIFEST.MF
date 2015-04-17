@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/branding/Bundle.pro
+ perties
+AutoUpdate-Essential-Module: true
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Implementation-Version: 1.0-20150406
+OpenIDE-Module-Build-Version: 201504061845
+OpenIDE-Module: dk.sdu.mmmi.cbse.pronetbeans.branding
+OpenIDE-Module-Public-Packages: -
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
+OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
+OpenIDE-Module-Name: ProNetbeans-Branding
+OpenIDE-Module-Short-Description: Cross platform game library for N≥
+ 4 platforms.
+OpenIDE-Module-Long-Description: Cross platform game library for N≥4
+  platforms.
+OpenIDE-Module-Module-Dependencies: org.netbeans.api.annotations.commo
+ n/1 > 1.23.1
+

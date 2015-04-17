@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: /Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Implementation-Version: 1.0-20150406
+OpenIDE-Module-Build-Version: 201504061846
+OpenIDE-Module: dk.sdu.mmmi.cbse.Player
+OpenIDE-Module-Public-Packages: -
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
+OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
+OpenIDE-Module-Name: Player
+OpenIDE-Module-Short-Description: Cross platform game library for N≥
+ 4 platforms.
+OpenIDE-Module-Long-Description: Cross platform game library for N≥4
+  platforms.
+OpenIDE-Module-Module-Dependencies: org.netbeans.api.annotations.commo
+ n/1 > 1.23.1, org.openide.util.lookup > 8.24.1, com.decouplink.decoup
+ link > 1.0, dk.sdu.mmmi.cbse.Common > 1.0
+

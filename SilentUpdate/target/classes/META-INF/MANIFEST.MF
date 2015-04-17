@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: org/netbeans/modules/autoupdate/sile
+ ntupdate/resources/Bundle.properties
+OpenIDE-Module-Install: org/netbeans/modules/autoupdate/silentupdate/A
+ ctivator.class
+OpenIDE-Module-Layer: org/netbeans/modules/autoupdate/silentupdate/res
+ ources/layer.xml
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Implementation-Version: 1.0-20150406
+OpenIDE-Module-Build-Version: 201504061849
+OpenIDE-Module: dk.sdu.mmmi.cbse.SilentUpdate
+OpenIDE-Module-Public-Packages: -
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
+OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
+OpenIDE-Module-Name: SilentUpdate
+OpenIDE-Module-Short-Description: Cross platform game library for N≥
+ 4 platforms.
+OpenIDE-Module-Long-Description: Cross platform game library for N≥4
+  platforms.
+OpenIDE-Module-Module-Dependencies: org.netbeans.api.annotations.commo
+ n/1 > 1.23.1, org.openide.modules > 7.42.1, org.netbeans.modules.auto
+ update.services > 1.45.1, org.openide.io > 1.44.1, org.openide.util >
+  8.37.1
+

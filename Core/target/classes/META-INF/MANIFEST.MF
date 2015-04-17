@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Install: dk/sdu/mmmi/cbse/core/Installer.class
+OpenIDE-Module-Specification-Version: 1.0
+OpenIDE-Module-Implementation-Version: 1.0-20150406
+OpenIDE-Module-Build-Version: 201504061844
+OpenIDE-Module: dk.sdu.mmmi.cbse.Core
+OpenIDE-Module-Public-Packages: -
+OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
+OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
+OpenIDE-Module-Name: Core
+OpenIDE-Module-Short-Description: Cross platform game library for N≥
+ 4 platforms.
+OpenIDE-Module-Long-Description: Cross platform game library for N≥4
+  platforms.
+X-Class-Path: ext/dk.sdu.mmmi.cbse.Core/com-googlecode-playn/playn-jav
+ a.jar ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl.jar ext/dk.sdu.
+ mmmi.cbse.Core/net-java-jinput/jinput.jar ext/dk.sdu.mmmi.cbse.Core/n
+ et-java-jutils/jutils.jar ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/l
+ wjgl_util.jar ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl-platfor
+ m-natives-linux.jar ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl-p
+ latform-natives-windows.jar ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl
+ /lwjgl-platform-natives-osx.jar ext/dk.sdu.mmmi.cbse.Core/jlayer/mp3s
+ pi.jar ext/dk.sdu.mmmi.cbse.Core/jlayer/jlayer.jar ext/dk.sdu.mmmi.cb
+ se.Core/jlayer/tritonus_share.jar ext/dk.sdu.mmmi.cbse.Core/org-java-
+ websocket/Java-WebSocket.jar ext/dk.sdu.mmmi.cbse.Core/com-googlecode
+ -playn/playn-core.jar ext/dk.sdu.mmmi.cbse.Core/com-samskivert/pythag
+ oras.jar ext/dk.sdu.mmmi.cbse.Core/dk-sdu-mmmi-cbse/common.jar
+Maven-Class-Path: com.googlecode.playn:playn-java:1.9 org.lwjgl.lwjgl:
+ lwjgl:2.9.0 net.java.jinput:jinput:2.0.5 net.java.jutils:jutils:1.0.0
+  org.lwjgl.lwjgl:lwjgl_util:2.9.0 org.lwjgl.lwjgl:lwjgl-platform:2.9.
+ 0:natives-linux org.lwjgl.lwjgl:lwjgl-platform:2.9.0:natives-windows 
+ org.lwjgl.lwjgl:lwjgl-platform:2.9.0:natives-osx jlayer:mp3spi:1.9.5 
+ jlayer:jlayer:1.0.1 jlayer:tritonus_share:1.0 org.java-websocket:Java
+ -WebSocket:1.3.0 com.googlecode.playn:playn-core:1.9 com.samskivert:p
+ ythagoras:1.4.2 dk.sdu.mmmi.cbse:common:0.0.1-SNAPSHOT
+OpenIDE-Module-Module-Dependencies: org.openide.modules > 7.42.1, org.
+ openide.util.lookup > 8.24.1, org.openide.filesystems > 8.10.1, com.d
+ ecouplink.decouplink > 1.0, org.openide.util > 8.37.1, dk.sdu.mmmi.cb
+ se.Common > 1.0, org.openide.windows > 6.70.1, dk.sdu.mmmi.cbse.Move 
+ > 1.0
+
