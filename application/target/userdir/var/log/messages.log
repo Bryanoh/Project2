@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Monday, April 6, 2015 8:55:18 PM CEST
+>Log Session: Friday, April 17, 2015 11:46:36 AM CEST
 >System Info: 
   Product Version         = NetBeans Platform 8.0 (Build 201403101706)
   Operating System        = Mac OS X version 10.10.2 running on x86_64
@@ -33,14 +33,14 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.openide.windows [6.70.1 201403101706]
 	org.netbeans.bootstrap/1 [2.67.1 201403101706]
 	org.netbeans.core.startup/1 [1.53.1 201403101706]
-	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150406 201504061845]
-	com.decouplink.decouplink [1.0 1.0 201504061848]
-	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150406 201504061846]
-	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150406 201504061846]
-	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150406 201504061844]
-	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150406 201504061848]
-	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150406 201504061847]
-	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150406 201504061844]
-	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150406 201504061848]
-	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150406 201504061848]
-	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150406 201504061844]
+	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150417 201504170946]
+	com.decouplink.decouplink [1.0 1.0 201504170946]
+	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150417 201504170946]

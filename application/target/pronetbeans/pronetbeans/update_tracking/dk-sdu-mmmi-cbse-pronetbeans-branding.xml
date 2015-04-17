@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.pronetbeans.branding">
-    <module_version install_time="1428346515901" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1429263984661" last="true" origin="installer" specification_version="1.0">
         <file crc="3419895923" name="config/Modules/dk-sdu-mmmi-cbse-pronetbeans-branding.xml"/>
-        <file crc="2188690751" name="modules/dk-sdu-mmmi-cbse-pronetbeans-branding.jar"/>
-        <file crc="2840697238" name="update_tracking/dk-sdu-mmmi-cbse-pronetbeans-branding.xml"/>
+        <file crc="2401671967" name="modules/dk-sdu-mmmi-cbse-pronetbeans-branding.jar"/>
+        <file crc="1568656173" name="update_tracking/dk-sdu-mmmi-cbse-pronetbeans-branding.xml"/>
     </module_version>
 </module>

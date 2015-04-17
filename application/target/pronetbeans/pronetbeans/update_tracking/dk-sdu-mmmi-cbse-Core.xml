@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Core">
-    <module_version install_time="1428345890877" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1429263984787" last="true" origin="installer" specification_version="1.0">
         <file crc="2476775396" name="config/Modules/dk-sdu-mmmi-cbse-Core.xml"/>
-        <file crc="1107479136" name="modules/dk-sdu-mmmi-cbse-Core.jar"/>
+        <file crc="610036020" name="modules/dk-sdu-mmmi-cbse-Core.jar"/>
         <file crc="488675016" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-googlecode-playn/playn-core.jar"/>
         <file crc="2666325362" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-googlecode-playn/playn-java.jar"/>
         <file crc="1751738156" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-samskivert/pythagoras.jar"/>
-        <file crc="2680995709" name="modules/ext/dk.sdu.mmmi.cbse.Core/dk-sdu-mmmi-cbse/common.jar"/>
+        <file crc="29911622" name="modules/ext/dk.sdu.mmmi.cbse.Core/dk-sdu-mmmi-cbse/common.jar"/>
         <file crc="1246559435" name="modules/ext/dk.sdu.mmmi.cbse.Core/jlayer/jlayer.jar"/>
         <file crc="2335123706" name="modules/ext/dk.sdu.mmmi.cbse.Core/jlayer/mp3spi.jar"/>
         <file crc="2070970119" name="modules/ext/dk.sdu.mmmi.cbse.Core/jlayer/tritonus_share.jar"/>
@@ -17,6 +17,6 @@
         <file crc="3657013049" name="modules/ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl-platform-natives-windows.jar"/>
         <file crc="3012139663" name="modules/ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl.jar"/>
         <file crc="57910485" name="modules/ext/dk.sdu.mmmi.cbse.Core/org-lwjgl-lwjgl/lwjgl_util.jar"/>
-        <file crc="649520967" name="update_tracking/dk-sdu-mmmi-cbse-Core.xml"/>
+        <file crc="2631648146" name="update_tracking/dk-sdu-mmmi-cbse-Core.xml"/>
     </module_version>
 </module>

@@ -3,7 +3,7 @@ OpenIDE-Module-Localizing-Bundle: com/decouplink/Bundle.properties
 AutoUpdate-Show-In-Client: false
 OpenIDE-Module-Specification-Version: 1.0
 OpenIDE-Module-Implementation-Version: 1.0
-OpenIDE-Module-Build-Version: 201504061848
+OpenIDE-Module-Build-Version: 201504170946
 OpenIDE-Module: com.decouplink.decouplink
 OpenIDE-Module-Public-Packages: com.decouplink.*
 OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
