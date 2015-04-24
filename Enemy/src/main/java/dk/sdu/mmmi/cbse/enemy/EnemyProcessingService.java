@@ -43,11 +43,11 @@ private int turnDirection = 1;
 
                     rotation.angle += turnDirection * 0.05;
 
-                    // Fire
-                    if (Math.random() < 0.02) {
-                        Entity e = createBullet(entity);
-                        context(world).add(Entity.class, e);
-                    }
+//                    // Fire
+//                    if (Math.random() < 0.02) {
+//                        Entity e = createBullet(entity);
+//                        context(world).add(Entity.class, e);
+//                    }
                 }
 
                 if (behaviour.equals(HIT)) {

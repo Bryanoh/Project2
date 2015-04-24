@@ -48,16 +48,16 @@ public class EntityPlugin implements IGamePluginService {
     
     public Entity createEnemyShip() {
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
-        String url = cl.getResource("assets/images/EnemyShip.png").toExternalForm();
+        String url = cl.getResource("assets/images/Enemy.png").toExternalForm();
 
         Entity enemyShip = new Entity();
         context(enemyShip).add(EntityType.class, ENEMY);
         context(enemyShip).add(Health.class, new Health(5));
         context(enemyShip).add(BehaviourEnum.class, MOVE_RANDOM);
         context(enemyShip).add(View.class, new View(url));
-        context(enemyShip).add(Position.class, new Position(260, 280));
+        context(enemyShip).add(Position.class, new Position(100, 250));
         context(enemyShip).add(Rotation.class, new Rotation());
-        context(enemyShip).add(Velocity.class, new Velocity());
+        context(enemyShip).add(Velocity.class, new Velocity(0, 0));
         context(enemyShip).add(Scale.class, new Scale());
         context(enemyShip).add(Radius.class, new Radius(10));
 

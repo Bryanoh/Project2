@@ -18,8 +18,8 @@ public class Installer extends ModuleInstall {
 
         JavaPlatform.Config config = new JavaPlatform.Config();
         
-        config.width = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().width - 100;
-        config.height = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height - 100;
+        config.width = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().width - 400;
+        config.height = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height - 200;
         
         JavaPlatform.register(config);
         game = new AsteroidsGame();

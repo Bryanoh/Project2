@@ -38,16 +38,16 @@ public class EntityPlugin implements IGamePluginService {
     public Entity createPlayerShip() {
 
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
-        String url = cl.getResource("assets/images/Ship.png").toExternalForm();
+        String url = cl.getResource("assets/images/Player.png").toExternalForm();
 
         Entity playerShip = new Entity();
         context(playerShip).add(EntityType.class, PLAYER);
         context(playerShip).add(Health.class, new Health(5));
         context(playerShip).add(BehaviourEnum.class, NA);
         context(playerShip).add(View.class, new View(url));
-        context(playerShip).add(Position.class, new Position(360, 280));
+        context(playerShip).add(Position.class, new Position(800, 250));
         context(playerShip).add(Rotation.class, new Rotation());
-        context(playerShip).add(Velocity.class, new Velocity());
+        context(playerShip).add(Velocity.class, new Velocity(0,0));
         context(playerShip).add(Scale.class, new Scale());
         context(playerShip).add(Radius.class, new Radius(10));
 

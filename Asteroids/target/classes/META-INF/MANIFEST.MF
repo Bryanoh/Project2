@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/asteroids/Bundle.pr
  operties
 OpenIDE-Module-Specification-Version: 1.0
-OpenIDE-Module-Implementation-Version: 1.0-20150423
-OpenIDE-Module-Build-Version: 201504232007
+OpenIDE-Module-Implementation-Version: 1.0-20150424
+OpenIDE-Module-Build-Version: 201504240737
 OpenIDE-Module: dk.sdu.mmmi.cbse.Asteroids
 OpenIDE-Module-Public-Packages: -
 OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
 OpenIDE-Module-Display-Category: dk.sdu.mmmi.cbse
-OpenIDE-Module-Name: Asteroids
+OpenIDE-Module-Name: Obstacles
 OpenIDE-Module-Short-Description: Cross platform game library for N≥
  4 platforms.
 OpenIDE-Module-Long-Description: Cross platform game library for N≥4

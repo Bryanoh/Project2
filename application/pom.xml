@@ -11,7 +11,7 @@
     <artifactId>pronetbeans-app</artifactId>
     <packaging>nbm-application</packaging>
 
-    <name>ProNetbeans-App</name>
+    <name>SuperPaintball-App</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -147,12 +147,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>Asteroids</artifactId>
+            <artifactId>Collission</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>Collission</artifactId>
+            <artifactId>Asteroids</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

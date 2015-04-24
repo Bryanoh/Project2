@@ -25,6 +25,7 @@ import playn.core.Game;
 import playn.core.GroupLayer;
 import playn.core.Image;
 import playn.core.ImageLayer;
+import playn.core.Key;
 import playn.core.Keyboard;
 import playn.core.PlayN;
 import static playn.core.PlayN.assets;
@@ -73,7 +74,7 @@ public class AsteroidsGame extends Game.Default {
 //        layer.add(bg);
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
         String url = cl.getResource("assets/images/GrassBackground.png").toExternalForm();
-        
+
         layer.add(graphics().createImageLayer(assets().getRemoteImage(url, graphics().width(), graphics().height())));
 //        layer.add(graphics().createImmediateLayer(
 //                new StarRenderer(clock, world)));
@@ -173,30 +174,68 @@ public class AsteroidsGame extends Game.Default {
 
         @Override
         public void onKeyDown(Keyboard.Event event) {
-            switch (event.key()) {
-                case W:
-                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
-                    break;
 
-                case S:
-                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
-                    break;
-
-                case A:
-                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
-                    break;
-
-                case D:
-                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
-                    break;
-
-                case SPACE:
-                    context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT);
-                    break;
-
-                default:
-                    break;
+            if (event.key() == event.key().W) {
+                disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
             }
+
+            if (event.key() == event.key().S) {
+                disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
+            }
+
+            if (event.key() == event.key().A) {
+                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
+            }
+
+            if (event.key() == event.key().D) {
+                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
+            }
+
+            if (event.key() == event.key().LEFT) {
+                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT));
+            }
+
+            if (event.key() == event.key().RIGHT) {
+                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT));
+            }
+
+            if (event.key() == event.key().SPACE) {
+                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
+            }
+
+
+//            switch (event.key()) {
+//                case W:
+//                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
+//                    break;
+//
+//                case S:
+//                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
+//                    break;
+//
+//                case A:
+//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
+//                    break;
+//
+//                case D:
+//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
+//                    break;
+//                    
+//                case LEFT:
+//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT));
+//                    break;
+//                    
+//                case RIGHT:
+//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT));
+//                    break;
+//
+//                case SPACE:
+//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
+//                    break;
+//
+//                default:
+//                    break;
+//            }
         }
 
         @Override

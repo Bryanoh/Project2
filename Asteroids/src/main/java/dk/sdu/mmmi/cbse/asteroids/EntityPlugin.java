@@ -18,9 +18,11 @@ public class EntityPlugin implements IGamePluginService {
     @Override
     public void start(Object world) {
           // Add entities to the world
+        for (int i=0;i<11;i++) {
         Entity en = createAsteroid();
         Link<Entity> el = context(world).add(Entity.class, en);
         entities.add(el);
+        }
     }
 
     @Override

@@ -47,4 +47,5 @@
             <version>RELEASE80</version>
         </dependency>
     </dependencies>
+    <name>Obstacles</name>
 </project>
