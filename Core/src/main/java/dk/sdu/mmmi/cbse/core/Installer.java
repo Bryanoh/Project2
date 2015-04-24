@@ -28,6 +28,7 @@ public class Installer extends ModuleInstall {
             @Override
             public void run() {
                 PlayN.run(game);
+                System.out.println("Got in run");
             }
         }, 1000, TimeUnit.MILLISECONDS);
     }
