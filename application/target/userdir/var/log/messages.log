@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
->Log Session: Friday, April 17, 2015 11:46:36 AM CEST
+>Log Session: Thursday, April 23, 2015 10:07:59 PM CEST
 >System Info: 
   Product Version         = NetBeans Platform 8.0 (Build 201403101706)
-  Operating System        = Mac OS X version 10.10.2 running on x86_64
+  Operating System        = Mac OS X version 10.10.3 running on x86_64
   Java; VM; Vendor        = 1.8.0_31; Java HotSpot(TM) 64-Bit Server VM 25.31-b07; Oracle Corporation
   Runtime                 = Java(TM) SE Runtime Environment 1.8.0_31-b13
   Java Home               = /Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre
@@ -20,6 +20,8 @@
   Application Classpath   = /Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/boot.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/org-openide-modules.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/org-openide-util-lookup.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/org-openide-util.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/boot_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/boot_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/boot_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/boot_zh_CN.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-modules_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-modules_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-modules_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-modules_zh_CN.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util-lookup_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util-lookup_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util-lookup_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util-lookup_zh_CN.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/lib/locale/org-openide-util_zh_CN.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/lib/tools.jar
   Startup Classpath       = /Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/core.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/org-openide-filesystems.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/core_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/core_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/core_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/core_zh_CN.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/org-openide-filesystems_ja.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/org-openide-filesystems_ru.jar:/Users/Bryan/Documents/CBSE/ProNetbeans1/application/target/pronetbeans/platform/core/locale/org-openide-filesystems_zh_CN.jar
 -------------------------------------------------------------------------------
+INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: /Users/Bryan/Documents/CBSE/ProNetbeans1/Collission/target/classes
+INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: /Users/Bryan/Documents/CBSE/ProNetbeans1/Asteroids/target/classes
 INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.openide.util.lookup [8.24.1 201403101706]
 	org.openide.util [8.37.1 201403101706]
@@ -33,14 +35,14 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.openide.windows [6.70.1 201403101706]
 	org.netbeans.bootstrap/1 [2.67.1 201403101706]
 	org.netbeans.core.startup/1 [1.53.1 201403101706]
-	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150417 201504170946]
-	com.decouplink.decouplink [1.0 1.0 201504170946]
-	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150417 201504170946]
-	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150417 201504170946]
+	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150423 201504231535]
+	com.decouplink.decouplink [1.0 1.0 201504231535]
+	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150423 201504231558]
+	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150423 201504231535]
+	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150423 201504232007]
+	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150423 201504231535]

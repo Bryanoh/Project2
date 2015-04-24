@@ -69,8 +69,14 @@ public class AsteroidsGame extends Game.Default {
         layer = graphics().rootLayer();
 
         // create and add background image layer
-        layer.add(graphics().createImmediateLayer(
-                new StarRenderer(clock, world)));
+//        ImageLayer bg = graphics().createImageLayer().setImage(assets().getImage("assets/images/GrassBackground.png"));
+//        layer.add(bg);
+        ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
+        String url = cl.getResource("assets/images/GrassBackground.png").toExternalForm();
+        
+        layer.add(graphics().createImageLayer(assets().getRemoteImage(url, graphics().width(), graphics().height())));
+//        layer.add(graphics().createImmediateLayer(
+//                new StarRenderer(clock, world)));
     }
 
     private void updateGamePlugins(IGamePluginService iGamePlugin) {

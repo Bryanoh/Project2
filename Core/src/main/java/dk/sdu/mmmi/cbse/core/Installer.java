@@ -1,5 +1,6 @@
 package dk.sdu.mmmi.cbse.core;
 
+import java.awt.GraphicsEnvironment;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -16,8 +17,11 @@ public class Installer extends ModuleInstall {
     public void restored() {
 
         JavaPlatform.Config config = new JavaPlatform.Config();
+        
+        config.width = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().width - 100;
+        config.height = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height - 100;
+        
         JavaPlatform.register(config);
-
         game = new AsteroidsGame();
 
         e.schedule(new Runnable() {
@@ -25,7 +29,7 @@ public class Installer extends ModuleInstall {
             public void run() {
                 PlayN.run(game);
             }
-        }, 10000, TimeUnit.MILLISECONDS);
+        }, 1000, TimeUnit.MILLISECONDS);
     }
 
 }
