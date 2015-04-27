@@ -12,6 +12,7 @@ import dk.sdu.mmmi.cbse.common.data.GameTime;
 import dk.sdu.mmmi.cbse.common.data.Position;
 import dk.sdu.mmmi.cbse.common.data.Rotation;
 import dk.sdu.mmmi.cbse.common.data.Scale;
+import dk.sdu.mmmi.cbse.common.data.Velocity;
 import dk.sdu.mmmi.cbse.common.data.View;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
@@ -25,7 +26,6 @@ import playn.core.Game;
 import playn.core.GroupLayer;
 import playn.core.Image;
 import playn.core.ImageLayer;
-import playn.core.Key;
 import playn.core.Keyboard;
 import playn.core.PlayN;
 import static playn.core.PlayN.assets;
@@ -39,6 +39,7 @@ public class AsteroidsGame extends Game.Default {
     private GroupLayer layer;
     private final Object world = new Object();
     private Entity player;
+    
 
     private final Lookup lookup = Lookup.getDefault();
     private List<IGamePluginService> gamePlugins;
@@ -103,6 +104,22 @@ public class AsteroidsGame extends Game.Default {
             for (Entity e : context(world).all(Entity.class)) {
                 //Calls process on the entities which conforms to IEntityProcessingService.
                 entityProcessorService.process(world, e);
+                //Check for border collision
+                Position p = context(e).one(Position.class);
+                float height = graphics().height();
+                float width = graphics().width();
+               
+                if (p.x <= 0) {
+                    p.x = 0;
+                } else if (p.x >= width) {
+                    p.x = width;
+                }
+                if (p.y <= 0) {
+                    p.y = 0;
+                } else if (p.y >= height) {
+                    p.y = height;
+                }
+
             }
         }
     }
@@ -202,7 +219,6 @@ public class AsteroidsGame extends Game.Default {
             if (event.key() == event.key().SPACE) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
             }
-
 
 //            switch (event.key()) {
 //                case W:

@@ -3,9 +3,16 @@ package dk.sdu.mmmi.cbse.collission;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
 import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_DOWN;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_LEFT;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_RIGHT;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_UP;
 import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.BULLET;
 import dk.sdu.mmmi.cbse.common.data.Position;
 import dk.sdu.mmmi.cbse.common.data.Radius;
+import dk.sdu.mmmi.cbse.common.data.Velocity;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import org.openide.util.lookup.ServiceProvider;
 
@@ -18,10 +25,17 @@ public class CollisionSystem implements IEntityProcessingService {
 
     @Override
     public void process(Object world, Entity source) {
-
+       
         for (Entity target : context(world).all(Entity.class)) {
             if (!(source.equals(target)) && testCollision(source, target)) {
-                context(target).add(BehaviourEnum.class, HIT);
+                
+                if (context(source).one(EntityType.class).equals(BULLET)) {
+                    context(target).add(BehaviourEnum.class, HIT);
+                } else {
+                    context(target).add(BehaviourEnum.class, BehaviourEnum.COLLISSION);
+                    
+                }
+                
             }
         }
     }

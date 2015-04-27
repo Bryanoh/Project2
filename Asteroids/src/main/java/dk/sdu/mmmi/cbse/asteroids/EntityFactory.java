@@ -35,7 +35,7 @@ public class EntityFactory {
         context(asteroid).add(Rotation.class, new Rotation());
         context(asteroid).add(Velocity.class, new Velocity(0, 0));
         context(asteroid).add(Scale.class, new Scale());
-        context(asteroid).add(Radius.class, new Radius(10));
+        context(asteroid).add(Radius.class, new Radius(40));
         return asteroid;
     }
 }

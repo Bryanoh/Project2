@@ -33,6 +33,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
         double thrust = 5.0;
 
         for (BehaviourEnum behaviour : context(entity).all(BehaviourEnum.class)) {
+            
 
             if (behaviour == behaviour.MOVE_UP) {
                 position.y -= thrust;
@@ -66,6 +67,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
             if (behaviour == behaviour.TURN_RIGHT) {
                 rotation.angle += 0.1;
             }
+            
 
 //            switch (behaviour) {
 //                case MOVE_UP:
