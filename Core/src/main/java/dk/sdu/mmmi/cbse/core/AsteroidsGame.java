@@ -203,39 +203,6 @@ public class AsteroidsGame extends Game.Default {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
             }
 
-
-//            switch (event.key()) {
-//                case W:
-//                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
-//                    break;
-//
-//                case S:
-//                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
-//                    break;
-//
-//                case A:
-//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
-//                    break;
-//
-//                case D:
-//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
-//                    break;
-//                    
-//                case LEFT:
-//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT));
-//                    break;
-//                    
-//                case RIGHT:
-//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT));
-//                    break;
-//
-//                case SPACE:
-//                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
-//                    break;
-//
-//                default:
-//                    break;
-//            }
         }
 
         @Override
