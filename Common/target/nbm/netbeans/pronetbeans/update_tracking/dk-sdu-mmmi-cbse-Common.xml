@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Common">
-    <module_version install_time="1429860985406" last="true" origin="installer" specification_version="1.0">
-        <file crc="4083527964" name="config/Modules/dk-sdu-mmmi-cbse-Common.xml"/>
-        <file crc="287121448" name="modules/dk-sdu-mmmi-cbse-Common.jar"/>
+    <module_version install_time="1430126007659" last="true" origin="installer" specification_version="1.0">
+        <file crc="366440228" name="config/Modules/dk-sdu-mmmi-cbse-Common.xml"/>
+        <file crc="2092000774" name="modules/dk-sdu-mmmi-cbse-Common.jar"/>
     </module_version>
 </module>
