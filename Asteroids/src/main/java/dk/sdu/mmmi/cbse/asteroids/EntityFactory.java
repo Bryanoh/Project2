@@ -27,8 +27,8 @@ public class EntityFactory {
     Entity asteroid = new Entity();
     Random rand = new Random();
         context(asteroid).add(EntityType.class, ASTEROIDS);
-        context(asteroid).add(Health.class, new Health(2));
-        context(asteroid).add(BehaviourEnum.class, MOVE_RANDOM);
+//        context(asteroid).add(Health.class, new Health(2));
+//        context(asteroid).add(BehaviourEnum.class, MOVE_RANDOM);
         context(asteroid).add(View.class, new View(url));
         context(asteroid).add(Position.class, new Position(rand.nextInt(1000), rand.nextInt(1000)));
 //        context(asteroid).add(Position.class, new Position(40, 40));

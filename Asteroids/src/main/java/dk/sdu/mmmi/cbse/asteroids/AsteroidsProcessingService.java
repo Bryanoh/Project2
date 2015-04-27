@@ -17,47 +17,15 @@ import org.openide.util.lookup.ServiceProvider;
 
 @ServiceProvider(service = IEntityProcessingService.class)
 public class AsteroidsProcessingService implements IEntityProcessingService {
-
-    private int turnDirection = 1;
     
     @Override
     public void process(Object world, Entity entity) {
         
         Context entityCtx = context(entity);              
 
-//        if (entityCtx.one(EntityType.class).equals(ASTEROIDS)) {
-//
-//            for (BehaviourEnum behaviour : entityCtx.all(BehaviourEnum.class)) {
-//
-//                if (behaviour.equals(MOVE_RANDOM)) {
-//
-//                    // Get context from entity
-//                    Rotation rotation = entityCtx.one(Rotation.class);
-//
-//                    // Generate random movement direction
-//                    if (Math.random() < 0.05) {
-//                        turnDirection = -turnDirection;
-//                    }
-//
-//                    rotation.angle += turnDirection * 0.05;
-//                }
-                
-//                if (behaviour.equals(HIT)) {
-//                    Health h = entityCtx.one(Health.class);
-//                    // Damage
-//                    h.addDamage(2);
-//
-//                    // Check for destroyed
-//                    if (!h.isAlive()) {
-//                        entity.setDestroyed(true);
-//                    }
+        if (entityCtx.one(EntityType.class).equals(ASTEROIDS)) {
 
-//                     Remove hit behaviour
-//                    context(entity).remove(behaviour);
-                
-//                }
-//            }
-//        }
+        }
     }
     
 }
