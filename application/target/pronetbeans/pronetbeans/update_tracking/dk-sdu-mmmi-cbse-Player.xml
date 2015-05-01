@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Player">
-    <module_version install_time="1430473224647" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1430473416518" last="true" origin="installer" specification_version="1.0">
         <file crc="477641821" name="config/Modules/dk-sdu-mmmi-cbse-Player.xml"/>
-        <file crc="521756288" name="modules/dk-sdu-mmmi-cbse-Player.jar"/>
-        <file crc="3217757577" name="update_tracking/dk-sdu-mmmi-cbse-Player.xml"/>
+        <file crc="3626280589" name="modules/dk-sdu-mmmi-cbse-Player.jar"/>
+        <file crc="2485338163" name="update_tracking/dk-sdu-mmmi-cbse-Player.xml"/>
     </module_version>
 </module>

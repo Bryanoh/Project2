@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Friday, May 1, 2015 9:40:57 AM CEST
+>Log Session: Friday, May 1, 2015 11:44:24 AM CEST
 >System Info: 
   Product Version         = NetBeans Platform 8.0 (Build 201403101706)
   Operating System        = Windows 7 version 6.1 running on amd64
@@ -37,14 +37,14 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.openide.windows [6.70.1 201403101706]
 	org.netbeans.bootstrap/1 [2.67.1 201403101706]
 	org.netbeans.core.startup/1 [1.53.1 201403101706]
-	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150501 201505010740]
-	com.decouplink.decouplink [1.0 1.0 201505010740]
-	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150501 201505010740]
-	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150501 201505010740]
+	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150501 201505010943]
+	com.decouplink.decouplink [1.0 1.0 201505010943]
+	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150501 201505010943]
+	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150501 201505010943]

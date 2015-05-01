@@ -3,7 +3,7 @@ OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/expiration/Bundle.p
  roperties
 OpenIDE-Module-Specification-Version: 1.0
 OpenIDE-Module-Implementation-Version: 1.0-20150501
-OpenIDE-Module-Build-Version: 201505010940
+OpenIDE-Module-Build-Version: 201505010943
 OpenIDE-Module: dk.sdu.mmmi.cbse.Expiration
 OpenIDE-Module-Public-Packages: -
 OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1
