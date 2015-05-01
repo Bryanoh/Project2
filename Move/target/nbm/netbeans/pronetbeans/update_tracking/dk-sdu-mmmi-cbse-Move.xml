@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Move">
-    <module_version install_time="1430130017547" last="true" origin="installer" specification_version="1.0">
-        <file crc="126494301" name="config/Modules/dk-sdu-mmmi-cbse-Move.xml"/>
-        <file crc="3221395672" name="modules/dk-sdu-mmmi-cbse-Move.jar"/>
-        <file crc="262099638" name="update_tracking/dk-sdu-mmmi-cbse-Move.xml"/>
+    <module_version install_time="1430473210090" last="true" origin="installer" specification_version="1.0">
+        <file crc="1100908273" name="config/Modules/dk-sdu-mmmi-cbse-Move.xml"/>
+        <file crc="1455732096" name="modules/dk-sdu-mmmi-cbse-Move.jar"/>
+        <file crc="1580041726" name="update_tracking/dk-sdu-mmmi-cbse-Move.xml"/>
     </module_version>
 </module>

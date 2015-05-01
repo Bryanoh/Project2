@@ -26,7 +26,7 @@ public class CollisionSystem implements IEntityProcessingService {
         }
     }
 
-    private boolean testCollision(Entity source, Entity target) {
+    public boolean testCollision(Entity source, Entity target) {
 
         Position srcPos = context(source).one(Position.class);
         Radius srcRadius = context(source).one(Radius.class);

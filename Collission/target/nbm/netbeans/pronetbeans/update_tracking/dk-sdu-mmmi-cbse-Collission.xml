@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Collission">
-    <module_version install_time="1430130019626" last="true" origin="installer" specification_version="1.0">
-        <file crc="2616449282" name="config/Modules/dk-sdu-mmmi-cbse-Collission.xml"/>
-        <file crc="3377020075" name="modules/dk-sdu-mmmi-cbse-Collission.jar"/>
-        <file crc="3640629059" name="update_tracking/dk-sdu-mmmi-cbse-Collission.xml"/>
+    <module_version install_time="1430473215962" last="true" origin="installer" specification_version="1.0">
+        <file crc="1971130858" name="config/Modules/dk-sdu-mmmi-cbse-Collission.xml"/>
+        <file crc="502161264" name="modules/dk-sdu-mmmi-cbse-Collission.jar"/>
+        <file crc="1952865782" name="update_tracking/dk-sdu-mmmi-cbse-Collission.xml"/>
     </module_version>
 </module>

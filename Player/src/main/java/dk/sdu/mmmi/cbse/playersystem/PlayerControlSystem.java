@@ -2,8 +2,9 @@ package dk.sdu.mmmi.cbse.playersystem;
 
 import com.decouplink.Context;
 import static com.decouplink.Utilities.context;
+import dk.sdu.mmmi.cbse.collission.CollisionSystem;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
+
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
@@ -29,6 +30,7 @@ public class PlayerControlSystem implements IEntityProcessingService {
         Position position = context(entity).one(Position.class);
         Rotation rotation = entityCtx.one(Rotation.class);
         Velocity velocity = entityCtx.one(Velocity.class);
+        CollisionSystem collision = new CollisionSystem();
 
         double thrust = 5.0;
 
@@ -38,18 +40,42 @@ public class PlayerControlSystem implements IEntityProcessingService {
 
                 if (behaviour == behaviour.MOVE_UP) {
                     position.y -= thrust;
+                    
+                    for(Entity e : context(world).all(Entity.class)) {
+                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
+                            position.y += thrust ;
+                        }
+                    }
                 }
 
                 if (behaviour == behaviour.MOVE_DOWN) {
                     position.y += thrust;
+                    
+                    for(Entity e : context(world).all(Entity.class)) {
+                       if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
+                            position.y -= thrust;
+                        }
+                    }
                 }
 
                 if (behaviour == behaviour.MOVE_LEFT) {
                     position.x -= thrust;
+                    
+                    for(Entity e : context(world).all(Entity.class)) {
+                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
+                            position.x += thrust;
+                        }
+                    }
                 }
 
                 if (behaviour == behaviour.MOVE_RIGHT) {
                     position.x += thrust;
+                    
+                    for(Entity e : context(world).all(Entity.class)) {
+                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
+                            position.x -= thrust;
+                        }
+                    }
                 }
 
                 if (behaviour == behaviour.SHOOT) {
