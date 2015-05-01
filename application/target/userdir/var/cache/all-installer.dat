@@ -1,4 +1,4 @@
-#Mon Apr 27 12:13:15 CEST 2015
+#Fri May 01 09:28:41 CEST 2015
 org.netbeans.api.annotations.common.OpenIDE-Module-Install=\u0000
 org.openide.dialogs.OpenIDE-Module-Description=\u0000
 dk.sdu.mmmi.cbse.Asteroids.AutoUpdate-Show-In-Client=\u0000
@@ -110,8 +110,8 @@ org.openide.windows.OpenIDE-Module-Layer=\u0000
 dk.sdu.mmmi.cbse.Player.OpenIDE-Module-Hide-Classpath-Packages=\u0000
 dk.sdu.mmmi.cbse.Expiration.OpenIDE-Module-Install=\u0000
 dk.sdu.mmmi.cbse.Enemy.OpenIDE-Module-Description=\u0000
-org.openide.dialogs.AutoUpdate-Show-In-Client=false
 dk.sdu.mmmi.cbse.pronetbeans.branding.AutoUpdate-Show-In-Client=\u0000
+org.openide.dialogs.AutoUpdate-Show-In-Client=false
 dk.sdu.mmmi.cbse.Assets.OpenIDE-Module-Deprecated=\u0000
 org.netbeans.api.annotations.common.OpenIDE-Module-Description=\u0000
 dk.sdu.mmmi.cbse.Assets.OpenIDE-Module-Description=\u0000
