@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Monday, April 27, 2015 11:16:18 AM CEST
+>Log Session: Friday, May 1, 2015 8:25:22 AM CEST
 >System Info: 
   Product Version         = NetBeans Platform 8.0 (Build 201403101706)
   Operating System        = Windows 8 version 6.2 running on x86
@@ -20,10 +20,10 @@
   Application Classpath   = C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\boot.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\org-openide-modules.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\org-openide-util-lookup.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\org-openide-util.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\boot_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\boot_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\boot_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\boot_zh_CN.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-modules_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-modules_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-modules_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-modules_zh_CN.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util-lookup_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util-lookup_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util-lookup_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util-lookup_zh_CN.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\lib\locale\org-openide-util_zh_CN.jar;C:\Program Files (x86)\Java\jdk1.8.0_31\lib\dt.jar;C:\Program Files (x86)\Java\jdk1.8.0_31\lib\tools.jar
   Startup Classpath       = C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\core.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\org-openide-filesystems.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\core_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\core_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\core_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\core_zh_CN.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\org-openide-filesystems_ja.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\org-openide-filesystems_ru.jar;C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\platform\core\locale\org-openide-filesystems_zh_CN.jar
 -------------------------------------------------------------------------------
-INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\..\..\Project2\branding\target\classes
+INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\branding\target\classes
 INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\com.decouplink\target\classes
 INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\Expiration\target\classes
-INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\..\..\Project2\Collission\target\classes
+INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\Collission\target\classes
 INFO [org.netbeans.core.startup.NbEvents]: Module patch or custom extension: C:\Programmering\NetBeans\paintball\Project2\application\target\pronetbeans\..\..\..\Asteroids\target\classes
 WARNING [java.util.prefs]: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
 INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
@@ -39,14 +39,14 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.openide.windows [6.70.1 201403101706]
 	org.netbeans.bootstrap/1 [2.67.1 201403101706]
 	org.netbeans.core.startup/1 [1.53.1 201403101706]
-	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150427 201504270913]
-	com.decouplink.decouplink [1.0 1.0 201504270913]
-	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150427 201504270913]
-	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150427 201504270913]
+	dk.sdu.mmmi.cbse.pronetbeans.branding [1.0 1.0-20150501 201505010624]
+	com.decouplink.decouplink [1.0 1.0 201505010624]
+	dk.sdu.mmmi.cbse.Common [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Player [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Move [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Expiration [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Enemy [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Core [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Collission [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Asteroids [1.0 1.0-20150501 201505010624]
+	dk.sdu.mmmi.cbse.Assets [1.0 1.0-20150501 201505010624]

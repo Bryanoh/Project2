@@ -244,7 +244,7 @@ public class AsteroidsGame extends Game.Default {
 
         @Override
         public void onKeyUp(Keyboard.Event event) {
-            disposables.dispose();
+           disposables.dispose();
         }
     };
 

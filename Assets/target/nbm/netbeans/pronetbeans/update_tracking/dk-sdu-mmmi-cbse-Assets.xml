@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Assets">
-    <module_version install_time="1430126001949" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1430461475327" last="true" origin="installer" specification_version="1.0">
         <file crc="563955593" name="config/Modules/dk-sdu-mmmi-cbse-Assets.xml"/>
-        <file crc="1578175996" name="modules/dk-sdu-mmmi-cbse-Assets.jar"/>
+        <file crc="1319296971" name="modules/dk-sdu-mmmi-cbse-Assets.jar"/>
     </module_version>
 </module>

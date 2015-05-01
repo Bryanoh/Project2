@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Core">
-    <module_version install_time="1430126011710" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1430461488573" last="true" origin="installer" specification_version="1.0">
         <file crc="3683220553" name="config/Modules/dk-sdu-mmmi-cbse-Core.xml"/>
-        <file crc="4254362463" name="modules/dk-sdu-mmmi-cbse-Core.jar"/>
+        <file crc="801608667" name="modules/dk-sdu-mmmi-cbse-Core.jar"/>
         <file crc="488675016" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-googlecode-playn/playn-core.jar"/>
         <file crc="2666325362" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-googlecode-playn/playn-java.jar"/>
         <file crc="1751738156" name="modules/ext/dk.sdu.mmmi.cbse.Core/com-samskivert/pythagoras.jar"/>

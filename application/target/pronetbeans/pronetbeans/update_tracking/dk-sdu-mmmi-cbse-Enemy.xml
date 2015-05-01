@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Enemy">
-    <module_version install_time="1430126024325" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1430461501030" last="true" origin="installer" specification_version="1.0">
         <file crc="4083148919" name="config/Modules/dk-sdu-mmmi-cbse-Enemy.xml"/>
-        <file crc="3693791649" name="modules/dk-sdu-mmmi-cbse-Enemy.jar"/>
+        <file crc="2154324994" name="modules/dk-sdu-mmmi-cbse-Enemy.jar"/>
         <file crc="1116739117" name="modules/ext/dk.sdu.mmmi.cbse.Enemy/com-google-guava/guava.jar"/>
     </module_version>
 </module>

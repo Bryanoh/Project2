@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="com.decouplink.decouplink">
-    <module_version install_time="1430126005550" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1430461479746" last="true" origin="installer" specification_version="1.0">
         <file crc="2026075934" name="config/Modules/com-decouplink-decouplink.xml"/>
-        <file crc="2271904913" name="modules/com-decouplink-decouplink.jar"/>
+        <file crc="2747455677" name="modules/com-decouplink-decouplink.jar"/>
         <file crc="1116739117" name="modules/ext/com.decouplink.decouplink/com-google-guava/guava.jar"/>
     </module_version>
 </module>
