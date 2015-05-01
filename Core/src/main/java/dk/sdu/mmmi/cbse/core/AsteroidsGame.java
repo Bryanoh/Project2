@@ -103,6 +103,21 @@ public class AsteroidsGame extends Game.Default {
             for (Entity e : context(world).all(Entity.class)) {
                 //Calls process on the entities which conforms to IEntityProcessingService.
                 entityProcessorService.process(world, e);
+                Position pos = context(e).one(Position.class);
+                int width = graphics().width();
+                int height = graphics().height();
+                
+                if(pos.x < 0) {
+                    pos.x = 0;
+                } else if(pos.x > width) {
+                    pos.x = width;
+                }
+                if(pos.y < 0) {
+                    pos.y = 0;
+                } else if (pos.y > height) {
+                    pos.y = height;
+                }
+                
             }
         }
     }
