@@ -4,6 +4,8 @@ import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
 import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
 import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.BULLET;
 import dk.sdu.mmmi.cbse.common.data.Position;
 import dk.sdu.mmmi.cbse.common.data.Radius;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
@@ -22,6 +24,9 @@ public class CollisionSystem implements IEntityProcessingService {
         for (Entity target : context(world).all(Entity.class)) {
             if (!(source.equals(target)) && testCollision(source, target)) {
                 context(target).add(BehaviourEnum.class, HIT);
+                if (context(source).one(EntityType.class).equals(BULLET)) {
+                    source.setDestroyed(true);
+                }
             }
         }
     }
