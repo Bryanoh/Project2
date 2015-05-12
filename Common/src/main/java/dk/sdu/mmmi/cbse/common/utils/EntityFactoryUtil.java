@@ -43,11 +43,11 @@ public class EntityFactoryUtil {
         context(bullet).add(Position.class, new Position(x, y));
         context(bullet).add(Rotation.class, new Rotation(r.angle));
 
-        float velocityX = (float) (v.vectorX + Math.cos(r.angle) * 15);
-        float velocityY = (float) (v.vectorY + Math.sin(r.angle) * 15);
+        float velocityX = (float) (v.vectorX + Math.cos(r.angle) * 30);
+        float velocityY = (float) (v.vectorY + Math.sin(r.angle) * 30);
         context(bullet).add(Velocity.class, new Velocity(velocityX, velocityY));
 
-        context(bullet).add(Radius.class, new Radius(3));
+        context(bullet).add(Radius.class, new Radius(2));
         context(bullet).add(Scale.class, new Scale());
         context(bullet).add(Expires.class, new Expires(5000));
 
