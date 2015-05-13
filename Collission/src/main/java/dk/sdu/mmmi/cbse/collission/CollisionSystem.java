@@ -6,6 +6,7 @@ import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
 import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.PICKUP;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.ASTEROIDS;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.BULLET;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
 import dk.sdu.mmmi.cbse.common.data.Position;
@@ -25,7 +26,10 @@ public class CollisionSystem implements IEntityProcessingService {
 
         for (Entity target : context(world).all(Entity.class)) {
             if (!(source.equals(target)) && testCollision(source, target)) {
-                context(target).add(BehaviourEnum.class, HIT);
+                if(!context(target).one(EntityType.class).equals(ASTEROIDS)) {
+                    context(target).add(BehaviourEnum.class, HIT);
+                    
+                }
                 if (context(source).one(EntityType.class).equals(BULLET)) {
                     source.setDestroyed(true);
                 }
