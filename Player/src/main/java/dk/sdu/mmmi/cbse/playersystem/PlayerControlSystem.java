@@ -39,7 +39,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
             for (BehaviourEnum behaviour : context(entity).all(BehaviourEnum.class)) {
 
                 if (behaviour == behaviour.MOVE_UP) {
-                    position.y -= thrust;
+                    position.x += Math.cos(rotation.angle) * thrust;
+                    position.y += Math.sin(rotation.angle) * thrust;
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
@@ -49,7 +50,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 }
 
                 if (behaviour == behaviour.MOVE_DOWN) {
-                    position.y += thrust;
+                    position.x -= Math.cos(rotation.angle) * thrust;
+                    position.y -= Math.sin(rotation.angle) * thrust;
                     
                     for(Entity e : context(world).all(Entity.class)) {
                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
@@ -59,7 +61,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 }
 
                 if (behaviour == behaviour.MOVE_LEFT) {
-                    position.x -= thrust;
+                    position.x -= Math.cos(rotation.angle + 90) * thrust;
+                    position.y -= Math.sin(rotation.angle + 90) * thrust;
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
@@ -69,7 +72,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 }
 
                 if (behaviour == behaviour.MOVE_RIGHT) {
-                    position.x += thrust;
+                    position.x += Math.cos(rotation.angle + 90) * thrust;
+                    position.y += Math.sin(rotation.angle + 90) * thrust;
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
