@@ -22,7 +22,7 @@ public class EntityFactory {
     
     public static Entity createAsteroid() {
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
-        String url = cl.getResource("assets/images/Obstacle3.png").toExternalForm();
+        String url = cl.getResource("assets/images/Træ.png").toExternalForm();
         
     Entity asteroid = new Entity();
     Random rand = new Random();
