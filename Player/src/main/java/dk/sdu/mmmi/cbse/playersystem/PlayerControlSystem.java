@@ -44,7 +44,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                            position.y += thrust ;
+                            position.x -= Math.cos(rotation.angle) * thrust;
+                            position.y -= Math.sin(rotation.angle) * thrust;
                         }
                     }
                 }
@@ -55,7 +56,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                     
                     for(Entity e : context(world).all(Entity.class)) {
                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                            position.y -= thrust;
+                           position.x += Math.cos(rotation.angle) * thrust;
+                           position.y += Math.sin(rotation.angle) * thrust;
                         }
                     }
                 }
@@ -66,7 +68,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                            position.x += thrust;
+                             position.x += Math.cos(rotation.angle + 90) * thrust;
+                             position.y += Math.sin(rotation.angle + 90) * thrust;
                         }
                     }
                 }
@@ -77,7 +80,8 @@ public class PlayerControlSystem implements IEntityProcessingService {
                     
                     for(Entity e : context(world).all(Entity.class)) {
                         if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                            position.x -= thrust;
+                             position.x -= Math.cos(rotation.angle + 90) * thrust;
+                             position.y -= Math.sin(rotation.angle + 90) * thrust;
                         }
                     }
                 }
