@@ -1,6 +1,8 @@
 package dk.sdu.mmmi.cbse.core;
 
 import com.decouplink.DisposableList;
+import com.decouplink.Disposable;
+import com.decouplink.Link;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
 import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_DOWN;
@@ -25,7 +27,6 @@ import playn.core.Game;
 import playn.core.GroupLayer;
 import playn.core.Image;
 import playn.core.ImageLayer;
-import playn.core.Key;
 import playn.core.Keyboard;
 import playn.core.PlayN;
 import static playn.core.PlayN.assets;
@@ -39,7 +40,8 @@ public class AsteroidsGame extends Game.Default {
     private GroupLayer layer;
     private final Object world = new Object();
     private Entity player;
-
+    Disposable UP, DOWN, LEFT, RIGHT, TURNLEFT, TURNRIGHT, SHOOT;
+  
     private final Lookup lookup = Lookup.getDefault();
     private List<IGamePluginService> gamePlugins;
 
@@ -49,7 +51,7 @@ public class AsteroidsGame extends Game.Default {
 
     @Override
     public void init() {
-
+        
         // Add lookup listener
         Lookup.Result<IGamePluginService> result = lookup.lookupResult(IGamePluginService.class);
         result.addLookupListener(lookupListener);
@@ -191,31 +193,38 @@ public class AsteroidsGame extends Game.Default {
         public void onKeyDown(Keyboard.Event event) {
 
             if (event.key() == event.key().W) {
-                disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
+                UP = context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_UP);
+                disposables.add(UP);
             }
 
             if (event.key() == event.key().S) {
-                disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
+                DOWN = context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_DOWN);
+                disposables.add(DOWN);
             }
 
             if (event.key() == event.key().A) {
-                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
+                LEFT = context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT);
+                disposables.add(LEFT);
             }
 
             if (event.key() == event.key().D) {
-                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
+                RIGHT = context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT);
+                disposables.add(RIGHT);
             }
 
             if (event.key() == event.key().LEFT) {
-                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT));
+                TURNLEFT = context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT);
+                disposables.add(TURNLEFT);
             }
 
             if (event.key() == event.key().RIGHT) {
-                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT));
+                TURNRIGHT = context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT);
+                disposables.add(TURNRIGHT);
             }
 
             if (event.key() == event.key().SPACE) {
-                disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
+                SHOOT = context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT);
+                disposables.add(SHOOT);
             }
 
         }
@@ -226,7 +235,33 @@ public class AsteroidsGame extends Game.Default {
 
         @Override
         public void onKeyUp(Keyboard.Event event) {
-            disposables.dispose();
+           if (event.key() == event.key().W) {
+                disposables.disposeOne(UP);
+            }
+
+            if (event.key() == event.key().S) {
+                disposables.disposeOne(DOWN);
+            }
+
+            if (event.key() == event.key().A) {
+                disposables.disposeOne(LEFT);
+            }
+
+            if (event.key() == event.key().D) {
+                disposables.disposeOne(RIGHT);
+            }
+
+            if (event.key() == event.key().LEFT) {
+                disposables.disposeOne(TURNLEFT);
+            }
+
+            if (event.key() == event.key().RIGHT) {
+                disposables.disposeOne(TURNRIGHT);
+            }
+
+            if (event.key() == event.key().SPACE) {
+                disposables.disposeOne(SHOOT);
+            }
         }
     };
 
