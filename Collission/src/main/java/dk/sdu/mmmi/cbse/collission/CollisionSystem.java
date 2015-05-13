@@ -3,9 +3,11 @@ package dk.sdu.mmmi.cbse.collission;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
 import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.PICKUP;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.BULLET;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
 import dk.sdu.mmmi.cbse.common.data.Position;
 import dk.sdu.mmmi.cbse.common.data.Radius;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
@@ -26,6 +28,9 @@ public class CollisionSystem implements IEntityProcessingService {
                 context(target).add(BehaviourEnum.class, HIT);
                 if (context(source).one(EntityType.class).equals(BULLET)) {
                     source.setDestroyed(true);
+                }
+                if(context(source).one(EntityType.class).equals(PLAYER) && context(target).one(EntityType.class).equals(EntityType.WEAPONPICKUP)){
+                    context(target).add(BehaviourEnum.class, PICKUP);
                 }
             }
         }
