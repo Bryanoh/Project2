@@ -14,7 +14,7 @@ public class DisposableList implements Disposable {
 
     public DisposableList() {
     }
-
+    
     public DisposableList(Disposable... list) {
         Collection<Disposable> c = Arrays.asList(list);
 
@@ -36,7 +36,9 @@ public class DisposableList implements Disposable {
     public void remove(Disposable d) {
         items.remove(d);
     }
-
+    public void disposeOne(Disposable d) {
+        d.dispose();
+    }
     @Override
     public void dispose() {
         for(Disposable d : items) {
