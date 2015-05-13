@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/enemy/Bundle.proper
  ties
 OpenIDE-Module-Specification-Version: 1.0
-OpenIDE-Module-Implementation-Version: 1.0-20150501
-OpenIDE-Module-Build-Version: 201505010715
+OpenIDE-Module-Implementation-Version: 1.0-20150511
+OpenIDE-Module-Build-Version: 201505111117
 OpenIDE-Module: dk.sdu.mmmi.cbse.Enemy
 OpenIDE-Module-Public-Packages: -
 OpenIDE-Module-Requires: org.openide.modules.ModuleFormat1

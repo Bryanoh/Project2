@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="dk.sdu.mmmi.cbse.Expiration">
-    <module_version install_time="1430464531484" last="true" origin="installer" specification_version="1.0">
-        <file crc="2570468896" name="config/Modules/dk-sdu-mmmi-cbse-Expiration.xml"/>
-        <file crc="684981624" name="modules/dk-sdu-mmmi-cbse-Expiration.jar"/>
-        <file crc="3187043441" name="update_tracking/dk-sdu-mmmi-cbse-Expiration.xml"/>
+    <module_version install_time="1431343034735" last="true" origin="installer" specification_version="1.0">
+        <file crc="3136542842" name="config/Modules/dk-sdu-mmmi-cbse-Expiration.xml"/>
+        <file crc="565958628" name="modules/dk-sdu-mmmi-cbse-Expiration.jar"/>
     </module_version>
 </module>
