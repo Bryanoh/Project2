@@ -6,5 +6,5 @@ package dk.sdu.mmmi.cbse.common.data;
  */
 public enum EntityType {
 
-    PLAYER, ENEMY, BULLET, ASTEROIDS;
+    PLAYER, ENEMY, BULLET, ASTEROIDS, LABEL, WEAPONPICKUP;
 }
