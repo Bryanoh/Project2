@@ -33,19 +33,18 @@ import org.openide.util.lookup.ServiceProvider;
 @ServiceProvider(service = IGamePluginService.class)
 public class EntityPlugin implements IGamePluginService {
 
-    DisposableList entities = new DisposableList();
-    
+    private Link<Entity> pl;
+
     public EntityPlugin() {
-        
+
     }
-    
+
     @Override
     public void start(Object world) {
         // Add entities to the world
-    Link<Entity> pl = context(world).add(Entity.class, createEnemyShip());
-        entities.add(pl);
+        pl = context(world).add(Entity.class, createEnemyShip());
     }
-    
+
     public Entity createEnemyShip() {
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
         String url = cl.getResource("assets/images/Enemy.png").toExternalForm();
@@ -66,7 +65,7 @@ public class EntityPlugin implements IGamePluginService {
 
     @Override
     public void stop() {
-        entities.dispose();
+        pl.getDestination().setDestroyed(true);
     }
-    
+
 }
