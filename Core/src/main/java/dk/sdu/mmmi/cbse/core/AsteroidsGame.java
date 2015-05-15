@@ -17,7 +17,9 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
@@ -40,8 +42,10 @@ public class AsteroidsGame extends Game.Default {
     private final Object world = new Object();
     private Entity player;
 
+    private Set<IGamePluginService> newResult;
     private final Lookup lookup = Lookup.getDefault();
     private List<IGamePluginService> gamePlugins;
+    
 
     public AsteroidsGame() {
         super(33); // call update every 33ms (30 times per second)
@@ -55,6 +59,7 @@ public class AsteroidsGame extends Game.Default {
         result.addLookupListener(lookupListener);
         gamePlugins = new ArrayList<IGamePluginService>(result.allInstances());
         result.allItems();
+        result.addLookupListener(newLookupListener);
 
         // Add clock to world context
         context(world).add(GameTime.class, new GameTime());
@@ -82,7 +87,19 @@ public class AsteroidsGame extends Game.Default {
 
     private void updateGamePlugins(IGamePluginService iGamePlugin) {
         // Lookup all Game Plugins using ServiceLoader
+
         iGamePlugin.start(world);
+
+        newResult = new HashSet();
+
+        newResult.addAll(lookup.lookupAll(IGamePluginService.class));
+
+        for (IGamePluginService oldGamePlugins : gamePlugins) {
+            if (!newResult.contains(oldGamePlugins)) {
+                oldGamePlugins.stop();
+                System.out.println("Fra update: " + oldGamePlugins.getClass().getName());
+            } 
+        }
 
         for (Entity entity : context(world).all(Entity.class)) {
             if (context(entity).one(EntityType.class) == PLAYER) {
@@ -103,6 +120,7 @@ public class AsteroidsGame extends Game.Default {
             for (Entity e : context(world).all(Entity.class)) {
                 //Calls process on the entities which conforms to IEntityProcessingService.
                 entityProcessorService.process(world, e);
+
             }
         }
     }
@@ -124,12 +142,17 @@ public class AsteroidsGame extends Game.Default {
             if (view == null) {
                 view = createView(e);
             }
+
             view.setTranslation(p.x, p.y);
             view.setRotation(r.angle);
             view.setAlpha(1.0f);
             view.setScale(s.x, s.y);
+            
+            
+
 
             if (e.isDestroyed()) {
+                System.out.println("Fra destroyed: " + e.getClass().getName());
                 layer.remove(view);
                 context(world).remove(e);
             }
@@ -175,34 +198,33 @@ public class AsteroidsGame extends Game.Default {
         @Override
         public void onKeyDown(Keyboard.Event event) {
 
-            if (event.key() == event.key().W) {
+            if (event.key() == Key.W) {
                 disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
             }
 
-            if (event.key() == event.key().S) {
+            if (event.key() == Key.S) {
                 disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
             }
 
-            if (event.key() == event.key().A) {
+            if (event.key() == Key.A) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_LEFT));
             }
 
-            if (event.key() == event.key().D) {
+            if (event.key() == Key.D) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_RIGHT));
             }
 
-            if (event.key() == event.key().LEFT) {
+            if (event.key() == Key.LEFT) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_LEFT));
             }
 
-            if (event.key() == event.key().RIGHT) {
+            if (event.key() == Key.RIGHT) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.TURN_RIGHT));
             }
 
-            if (event.key() == event.key().SPACE) {
+            if (event.key() == Key.SPACE) {
                 disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
             }
-
 
 //            switch (event.key()) {
 //                case W:
@@ -252,14 +274,30 @@ public class AsteroidsGame extends Game.Default {
 
         //Looks for changes in the every instance of the IGamePluginService
         @Override
-        public void resultChanged(LookupEvent le) {
+        public void resultChanged(LookupEvent le) {          
             for (IGamePluginService updatedGamePlugin : lookup.lookupAll(IGamePluginService.class)) {
                 if (!gamePlugins.contains(updatedGamePlugin)) {
+                    System.out.println("Fra den første listener: " + updatedGamePlugin.getClass().getName());
                     updateGamePlugins(updatedGamePlugin);
                     gamePlugins.add(updatedGamePlugin);
+                } 
+            }
+        }
+    };
+    
+    private final LookupListener newLookupListener = new LookupListener() {
+
+        @Override
+        public void resultChanged(LookupEvent ev) {
+            newResult.removeAll(newResult);
+            newResult.addAll(lookup.lookupAll(IGamePluginService.class));
+            
+            for (IGamePluginService oldGamePluginService : gamePlugins) {
+                System.out.println("fra den anden listener.");
+                if(!newResult.contains(oldGamePluginService)){
+                    oldGamePluginService.stop();
                 }
             }
         }
     };
-
 }
