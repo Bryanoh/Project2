@@ -22,7 +22,7 @@ import org.openide.util.lookup.ServiceProvider;
 @ServiceProvider(service = IGamePluginService.class)
 public class EntityPlugin implements IGamePluginService {
 
-    DisposableList entities = new DisposableList();
+    private Link<Entity> pl;
 
     public EntityPlugin() {
     }
@@ -31,8 +31,8 @@ public class EntityPlugin implements IGamePluginService {
     public void start(Object world) {
 
         // Add entities to the world
-        Link<Entity> pl = context(world).add(Entity.class, createPlayerShip());
-        entities.add(pl);
+        pl = context(world).add(Entity.class, createPlayerShip());
+
     }
 
     public Entity createPlayerShip() {
@@ -47,7 +47,7 @@ public class EntityPlugin implements IGamePluginService {
         context(playerShip).add(View.class, new View(url));
         context(playerShip).add(Position.class, new Position(800, 250));
         context(playerShip).add(Rotation.class, new Rotation());
-        context(playerShip).add(Velocity.class, new Velocity(0,0));
+        context(playerShip).add(Velocity.class, new Velocity(0, 0));
         context(playerShip).add(Scale.class, new Scale());
         context(playerShip).add(Radius.class, new Radius(10));
 
@@ -57,7 +57,7 @@ public class EntityPlugin implements IGamePluginService {
     @Override
     public void stop() {
         // Remove entities
-        entities.dispose();
+        pl.getDestination().setDestroyed(true);
     }
 
 }
