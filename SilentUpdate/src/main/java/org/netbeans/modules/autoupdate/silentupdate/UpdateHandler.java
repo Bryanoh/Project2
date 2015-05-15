@@ -5,12 +5,14 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.netbeans.api.autoupdate.InstallSupport;
 import org.netbeans.api.autoupdate.InstallSupport.Installer;
 import org.netbeans.api.autoupdate.InstallSupport.Validator;
 import org.netbeans.api.autoupdate.OperationContainer;
 import org.netbeans.api.autoupdate.OperationContainer.OperationInfo;
 import org.netbeans.api.autoupdate.OperationException;
+import org.netbeans.api.autoupdate.OperationSupport;
 import org.netbeans.api.autoupdate.OperationSupport.Restarter;
 import org.netbeans.api.autoupdate.UpdateElement;
 import org.netbeans.api.autoupdate.UpdateManager;
@@ -18,7 +20,6 @@ import org.netbeans.api.autoupdate.UpdateUnit;
 import org.netbeans.api.autoupdate.UpdateUnitProvider;
 import org.netbeans.api.autoupdate.UpdateUnitProviderFactory;
 import org.openide.util.NbBundle;
-
 
 public final class UpdateHandler {
 
@@ -99,6 +100,71 @@ public final class UpdateHandler {
             }
         }
         return elements4update;
+    }
+    
+    static void doDisable(String codeName) {
+        List<String> modulesToDisable = Collections.singletonList("dk.sdu.mmmi.cbse." + codeName);
+        OutputLogger.log("Module: " + codeName + " is about to be disabled");
+        OutputLogger.log("dk.sdu.mmmi.cbse." + codeName);
+        OperationContainer<OperationSupport> container = OperationContainer.createForDirectDisable();
+        for(UpdateUnit unit : UpdateManager.getDefault().getUpdateUnits(UpdateManager.TYPE.MODULE)) {
+            if(unit.getInstalled() != null) {
+                UpdateElement element = unit.getInstalled();
+                if(element.isEnabled()) {
+                    if(modulesToDisable.contains(element.getCodeName())) {
+                        if(container.canBeAdded(unit, element)) {
+                            OperationInfo<OperationSupport> operationInfo = container.add(element);
+                            if(operationInfo != null) {
+                                container.add(operationInfo.getRequiredElements());
+  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        if(!container.listAll().isEmpty()) {
+            try {
+                Restarter restarter = container.getSupport().doOperation(null);
+            } catch(OperationException ex) {
+                OutputLogger.log(ex.getLocalizedMessage(), ex.getCause());
+                OutputLogger.log("Error disabling module: " + codeName);
+            }
+        }
+    }
+    
+    static void doInstall(String codeName) {
+        List<String> modulesToEnable = Collections.singletonList("dk.sdu.mmmi.cbse." + codeName);
+        OutputLogger.log("Module: " + codeName + " is about to be enabled");
+        OutputLogger.log("dk.sdu.mmmi.cbse." + codeName);
+        OperationContainer<OperationSupport> container = OperationContainer.createForEnable();
+        for(UpdateUnit unit : UpdateManager.getDefault().getUpdateUnits(UpdateManager.TYPE.MODULE)) {
+            if(unit.getInstalled() != null) {
+                UpdateElement element = unit.getInstalled();
+                if(!element.isEnabled()) {
+                    if(modulesToEnable.contains(element.getCodeName())) {
+                        OutputLogger.log(element.getCodeName());
+                        if(container.canBeAdded(unit, element)) {
+                            OperationInfo<OperationSupport> operationInfo = container.add(element);
+                            if(operationInfo != null) {
+                                container.add(operationInfo.getRequiredElements());
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if(!container.listAll().isEmpty()) {
+            try {
+                OperationSupport.Restarter restarter = container.getSupport().doOperation(null);
+            } catch(OperationException ex) {
+                OutputLogger.log(ex.getLocalizedMessage(), ex.getCause());
+                OutputLogger.log("Error enabling module: " + codeName);
+            }
+        }
+        
     }
 
     static void handleInstall(OperationContainer<InstallSupport> container) throws UpdateHandlerException {
