@@ -59,7 +59,7 @@ public class EntityPlugin implements IGamePluginService {
         context(enemyShip).add(Rotation.class, new Rotation());
         context(enemyShip).add(Velocity.class, new Velocity(0, 0));
         context(enemyShip).add(Scale.class, new Scale());
-        context(enemyShip).add(Radius.class, new Radius(10));
+        context(enemyShip).add(Radius.class, new Radius(40));
 
         return enemyShip;
     }
