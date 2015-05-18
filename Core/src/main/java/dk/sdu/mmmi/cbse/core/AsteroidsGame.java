@@ -2,13 +2,11 @@ package dk.sdu.mmmi.cbse.core;
 
 import com.decouplink.DisposableList;
 import com.decouplink.Disposable;
-import com.decouplink.Link;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_DOWN;
-import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_UP;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.BUFFPLAYER;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
 import dk.sdu.mmmi.cbse.common.data.GameTime;
 import dk.sdu.mmmi.cbse.common.data.Position;
@@ -87,12 +85,14 @@ public class AsteroidsGame extends Game.Default {
         iGamePlugin.start(world);
 
         for (Entity entity : context(world).all(Entity.class)) {
-            if (context(entity).one(EntityType.class) == PLAYER) {
+            if (context(entity).one(EntityType.class) == BUFFPLAYER) {
+                this.player = entity;
+            } else if(context(entity).one(EntityType.class) == PLAYER) {
                 this.player = entity;
             }
         }
     }
-
+ 
     @Override
     public void update(int delta) {
 
@@ -120,6 +120,15 @@ public class AsteroidsGame extends Game.Default {
                     pos.y = height;
                 }
                 
+            }
+        }
+        for (Entity entity : context(world).all(Entity.class)) {
+            if (context(entity).one(EntityType.class) == BUFFPLAYER) {
+//                System.out.println("Changed player to  buff player");
+                this.player = entity;
+            } else if(context(entity).one(EntityType.class) == PLAYER) {
+//                System.out.println("Changed player to  player");
+                this.player = entity;
             }
         }
     }
