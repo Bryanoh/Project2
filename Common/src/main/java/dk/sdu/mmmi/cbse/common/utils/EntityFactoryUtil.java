@@ -30,8 +30,10 @@ public class EntityFactoryUtil {
 
         // Calc start position
         float c = 30.0f;
+        
         float x = p.x + (float) (c * cos(r.angle));
         float y = p.y + (float) (c * sin(r.angle));
+       
 
         ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
         String url = cl.getResource("assets/images/Bullet.png").toExternalForm();
@@ -45,6 +47,36 @@ public class EntityFactoryUtil {
 
         float velocityX = (float) (v.vectorX + Math.cos(r.angle) * 30);
         float velocityY = (float) (v.vectorY + Math.sin(r.angle) * 30);
+        context(bullet).add(Velocity.class, new Velocity(velocityX, velocityY));
+
+        context(bullet).add(Radius.class, new Radius(2));
+        context(bullet).add(Scale.class, new Scale());
+        context(bullet).add(Expires.class, new Expires(5000));
+
+        return bullet;
+    }
+    public static Entity createBullet2 (Entity source) {
+        Rotation r = context(source).one(Rotation.class);
+        Position p = context(source).one(Position.class);
+        Velocity v = context(source).one(Velocity.class);
+
+        // Calc start position + 35 + 2
+        float c = 38.0f;
+        float x = p.x + (float) (c * cos(r.angle));
+        float y = p.y + (float) (c * sin(r.angle));
+
+        ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
+        String url = cl.getResource("assets/images/Bullet.png").toExternalForm();
+
+        Entity bullet = new Entity();
+        context(bullet).add(EntityType.class, BULLET);
+        context(bullet).add(BehaviourEnum.class, DIRECTED);
+        context(bullet).add(View.class, new View(url));
+        context(bullet).add(Position.class, new Position(x, y));
+        context(bullet).add(Rotation.class, new Rotation(r.angle));
+
+        float velocityX = (float) (v.vectorX + Math.cos(r.angle+0.5) * 30);
+        float velocityY = (float) (v.vectorY + Math.sin(r.angle+0.5) * 30);
         context(bullet).add(Velocity.class, new Velocity(velocityX, velocityY));
 
         context(bullet).add(Radius.class, new Radius(2));
