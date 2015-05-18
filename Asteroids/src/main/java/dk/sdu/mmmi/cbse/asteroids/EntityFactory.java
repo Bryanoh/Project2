@@ -2,12 +2,9 @@
 package dk.sdu.mmmi.cbse.asteroids;
 
 import static com.decouplink.Utilities.context;
-import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.MOVE_RANDOM;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
-import static dk.sdu.mmmi.cbse.common.data.EntityType.ASTEROIDS;
-import dk.sdu.mmmi.cbse.common.data.Health;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.OBSTACLES;
 import dk.sdu.mmmi.cbse.common.data.Position;
 import dk.sdu.mmmi.cbse.common.data.Radius;
 import dk.sdu.mmmi.cbse.common.data.Rotation;
@@ -26,11 +23,11 @@ public class EntityFactory {
         
     Entity asteroid = new Entity();
     Random rand = new Random();
-        context(asteroid).add(EntityType.class, ASTEROIDS);
+        context(asteroid).add(EntityType.class, OBSTACLES);
 //        context(asteroid).add(Health.class, new Health(2));
 //        context(asteroid).add(BehaviourEnum.class, MOVE_RANDOM);
         context(asteroid).add(View.class, new View(url));
-        context(asteroid).add(Position.class, new Position(rand.nextInt(1000), rand.nextInt(1000)));
+        context(asteroid).add(Position.class, new Position(rand.nextInt(700)+300, rand.nextInt(700)+300));
 //        context(asteroid).add(Position.class, new Position(40, 40));
         context(asteroid).add(Rotation.class, new Rotation());
         context(asteroid).add(Velocity.class, new Velocity(0, 0));
