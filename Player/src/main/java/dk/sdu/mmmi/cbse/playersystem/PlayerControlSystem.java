@@ -1,19 +1,29 @@
 package dk.sdu.mmmi.cbse.playersystem;
 
 import com.decouplink.Context;
+import com.decouplink.DisposableList;
+import com.decouplink.Link;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.collission.CollisionSystem;
 import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.NA;
 
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.BUFFPLAYER;
 import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.WEAPONPICKUP;
 import dk.sdu.mmmi.cbse.common.data.Health;
 import dk.sdu.mmmi.cbse.common.data.Position;
+import dk.sdu.mmmi.cbse.common.data.Radius;
 import dk.sdu.mmmi.cbse.common.data.Rotation;
+import dk.sdu.mmmi.cbse.common.data.Scale;
 import dk.sdu.mmmi.cbse.common.data.Velocity;
+import dk.sdu.mmmi.cbse.common.data.View;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import static dk.sdu.mmmi.cbse.common.utils.EntityFactoryUtil.createBullet;
+import static dk.sdu.mmmi.cbse.common.utils.EntityFactoryUtil.createBullet2;
+import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
 
 /**
@@ -22,6 +32,12 @@ import org.openide.util.lookup.ServiceProvider;
  */
 @ServiceProvider(service = IEntityProcessingService.class)
 public class PlayerControlSystem implements IEntityProcessingService {
+
+    ClassLoader cl = Lookup.getDefault().lookup(ClassLoader.class);
+    String url = cl.getResource("assets/images/PlayerUpgraded.png").toExternalForm();
+    EntityPlugin entPlug = new EntityPlugin();
+
+    DisposableList entities = new DisposableList();
 
     @Override
     public void process(Object world, Entity entity) {
@@ -34,16 +50,16 @@ public class PlayerControlSystem implements IEntityProcessingService {
 
         double thrust = 5.0;
 
-        if (entityCtx.one(EntityType.class).equals(PLAYER)) {
+        if (entityCtx.one(EntityType.class).equals(PLAYER) || entityCtx.one(EntityType.class).equals(BUFFPLAYER)) {
 
             for (BehaviourEnum behaviour : context(entity).all(BehaviourEnum.class)) {
 
                 if (behaviour == behaviour.MOVE_UP) {
                     position.x += Math.cos(rotation.angle) * thrust;
                     position.y += Math.sin(rotation.angle) * thrust;
-                    
-                    for(Entity e : context(world).all(Entity.class)) {
-                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
+
+                    for (Entity e : context(world).all(Entity.class)) {
+                        if (!(entity.equals(e)) && collision.testCollision(entity, e) && !context(e).one(EntityType.class).equals(WEAPONPICKUP)) {
                             position.x -= Math.cos(rotation.angle) * thrust;
                             position.y -= Math.sin(rotation.angle) * thrust;
                         }
@@ -53,11 +69,11 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 if (behaviour == behaviour.MOVE_DOWN) {
                     position.x -= Math.cos(rotation.angle) * thrust;
                     position.y -= Math.sin(rotation.angle) * thrust;
-                    
-                    for(Entity e : context(world).all(Entity.class)) {
-                       if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                           position.x += Math.cos(rotation.angle) * thrust;
-                           position.y += Math.sin(rotation.angle) * thrust;
+
+                    for (Entity e : context(world).all(Entity.class)) {
+                        if (!(entity.equals(e)) && collision.testCollision(entity, e) && !context(e).one(EntityType.class).equals(WEAPONPICKUP)) {
+                            position.x += Math.cos(rotation.angle) * thrust;
+                            position.y += Math.sin(rotation.angle) * thrust;
                         }
                     }
                 }
@@ -65,11 +81,11 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 if (behaviour == behaviour.MOVE_LEFT) {
                     position.x -= Math.cos(rotation.angle + 90) * thrust;
                     position.y -= Math.sin(rotation.angle + 90) * thrust;
-                    
-                    for(Entity e : context(world).all(Entity.class)) {
-                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                             position.x += Math.cos(rotation.angle + 90) * thrust;
-                             position.y += Math.sin(rotation.angle + 90) * thrust;
+
+                    for (Entity e : context(world).all(Entity.class)) {
+                        if (!(entity.equals(e)) && collision.testCollision(entity, e) && !context(e).one(EntityType.class).equals(WEAPONPICKUP)) {
+                            position.x += Math.cos(rotation.angle + 90) * thrust;
+                            position.y += Math.sin(rotation.angle + 90) * thrust;
                         }
                     }
                 }
@@ -77,18 +93,26 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 if (behaviour == behaviour.MOVE_RIGHT) {
                     position.x += Math.cos(rotation.angle + 90) * thrust;
                     position.y += Math.sin(rotation.angle + 90) * thrust;
-                    
-                    for(Entity e : context(world).all(Entity.class)) {
-                        if(!(entity.equals(e)) && collision.testCollision(entity, e)) {
-                             position.x -= Math.cos(rotation.angle + 90) * thrust;
-                             position.y -= Math.sin(rotation.angle + 90) * thrust;
+
+                    for (Entity e : context(world).all(Entity.class)) {
+                        if (!(entity.equals(e)) && collision.testCollision(entity, e) && !context(e).one(EntityType.class).equals(WEAPONPICKUP)) {
+                            position.x -= Math.cos(rotation.angle + 90) * thrust;
+                            position.y -= Math.sin(rotation.angle + 90) * thrust;
                         }
                     }
                 }
 
                 if (behaviour == behaviour.SHOOT) {
+                    if (entityCtx.one(EntityType.class).equals(PLAYER)) {
                     Entity e = createBullet(entity);
                     context(world).add(Entity.class, e);
+                    }
+                    else {
+                         Entity e = createBullet(entity);
+                         context(world).add(Entity.class, e);
+                         Entity e2 = createBullet2(entity);
+                         context(world).add(Entity.class, e2);
+                    }
                     entityCtx.remove(behaviour);
                 }
 
@@ -112,6 +136,23 @@ public class PlayerControlSystem implements IEntityProcessingService {
                 }
                 if (behaviour == behaviour.TURN_RIGHT) {
                     rotation.angle += 0.1;
+                }
+                if (behaviour == behaviour.PICKUPPLAYER) {
+                    //Weapon pickup here.
+                    Position oldPosition =  entityCtx.one(Position.class);
+                    Rotation oldRotation = entityCtx.one(Rotation.class);
+                    entity.setDestroyed(true);                    
+                   
+                    System.out.println("PickUp");
+ 
+                    Link<Entity> pl = context(world).add(Entity.class, entPlug.createPlayerShip(url,oldPosition,BUFFPLAYER,oldRotation ));
+                    entities.add(pl);
+
+                    
+                    
+                     entityCtx.remove(behaviour);
+                    
+
                 }
             }
         }
