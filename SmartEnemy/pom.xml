@@ -29,15 +29,5 @@
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-api-annotations-common</artifactId>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>Common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.decouplink</groupId>
-            <artifactId>decouplink</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
 </project>

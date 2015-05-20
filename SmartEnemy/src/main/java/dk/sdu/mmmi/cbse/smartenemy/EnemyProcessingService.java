@@ -73,6 +73,57 @@ public class EnemyProcessingService implements IEntityProcessingService {
         } while (posX < 1024 && posY < 768);
     }
 
+//    /**
+//     * Calculate cost from this square (A) directly to target square (B)
+//     * Ignoring Obstacles - ONLY MOVES HORIZONTAL OR VERTICAL
+//     *
+//     * @return
+//     */
+//    private int calculateH(Square A) {
+//
+//        int hCost = 0;
+//        Square current = A;
+//        Square next = current;
+//
+//        Square target = targetSquare;
+//
+//        // Moves
+//        int horizontal = 0;
+//        int vertical = 0;
+//
+//        while (current.pos.x < target.pos.x || current.pos.y < target.pos.y) {
+//            // Move Horizontal
+//            // Right
+//            if (current.pos.x < target.pos.x) {
+//                next.pos.x = current.pos.x + 32;
+//                next.pos.y = current.pos.y;
+//                current = grids.get(grids.indexOf(next));
+//                horizontal++;
+//            } // Left
+//            else if (current.pos.x > target.pos.x) {
+//                next.pos.x = current.pos.x - 32;
+//                next.pos.y = current.pos.y;
+//                current = grids.get(grids.indexOf(next));
+//                horizontal++;
+//            } // Move Vertical
+//            // Up
+//            else if (current.pos.y > target.pos.y) {
+//                next.pos.x = current.pos.x;
+//                next.pos.y = current.pos.y - 32;
+//                current = grids.get(grids.indexOf(next));
+//                vertical++;
+//            } else if (current.pos.y < target.pos.y) {
+//                next.pos.x = current.pos.x;
+//                next.pos.y = current.pos.y + 32;
+//                current = grids.get(grids.indexOf(next));
+//                vertical++;
+//            }
+//
+//        }
+//
+//        hCost = (gHorizontal * horizontal) + (gVertical * vertical);
+//        return hCost;
+//    }
     /**
      * Calculate cost from this square (A) directly to target square (B)
      * Ignoring Obstacles - ONLY MOVES HORIZONTAL OR VERTICAL
